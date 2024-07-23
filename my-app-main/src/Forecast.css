@@ -1,0 +1,175 @@
+/* Reset margin and padding to ensure consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add margin bottom for h2 elements */
+.location-infoForecast {
+    margin-bottom: 2%;
+}
+
+/* Styling for forecast carousel */
+.forecast-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+/* Styling for each forecast day */
+.forecast-day {
+    flex: 0 0 calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px; /* Adjusted margin bottom */
+    transition: transform 0.3s ease;
+}
+
+/* Styling for every 4th forecast day to remove margin right */
+.forecast-day:nth-child(4n) {
+    margin-right: 0;
+}
+
+/* Styling for hover effect on forecast day */
+.forecast-day:hover {
+    transform: scale(1.1);
+    border: 10px solid transparent;
+    margin-top: 5px; /* Adjusted margin to accommodate the scaled size */
+}
+
+/* Background, color, and shadow for textboxes */
+.textboxForecast {
+    width: 100%;
+    background-color: rgba(45, 51, 64, 0.8);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Styling for textbox content */
+.textbox-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for textbox titles */
+.textbox-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styling for textbox text */
+.textbox-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Styling for title */
+.titleForecast {
+    color: white;
+    font-size: 40px;
+    text-align: center; /* Center text inside the span if needed */
+}
+
+/* Styling for title container */
+.title-containerForecast {
+    display: flex;
+    justify-content: center; /* Center children horizontally */
+    align-items: center;
+    padding: 20px 0; /* Add padding top and bottom */
+    position: relative; /* Set position for absolute child elements */
+}
+
+/* Adjust logo position with top margin */
+.title-containerForecast img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 10px; /* Slight top margin for the logo */
+}
+
+/* Position, cursor, and flex centering for back arrow */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for back arrow SVG */
+.back-arrow svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.back-arrow {
+    position: absolute;
+    z-index: 10; /* Higher z-index to ensure it's above other elements */
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+    .forecast-day {
+        flex: 0 0 calc(33.33% - 20px); /* 3 boxes per row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .forecast-day {
+        flex: 0 0 calc(50% - 20px); /* 2 boxes per row */
+    }
+
+    .title-containerForecast {
+        flex-direction: row; /* Change flex direction to row for side by side */
+        justify-content: center; /* Center children horizontally */
+        padding-top: 20px; /* Add padding to avoid overlap with back arrow */
+    }
+
+    .titleForecast {
+        margin-right: 10px; /* Add margin between title and image */
+    }
+
+    .title-containerForecast img {
+        width: auto; /* Reset width to default */
+        height: auto; /* Reset height to default */
+        margin-top: 0; /* Remove margin top */
+        margin-right: 0; 
+        position: relative; /* Reset position */
+        transform: none; /* Reset transform */
+        top: auto; /* Reset top */
+        right: auto; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .forecast-day {
+        flex: 0 0 100%; /* 1 box per row */
+        margin-right: 0; /* Remove right margin as it is full width now */
+    }
+
+    .titleForecast {
+        font-size: 24px; /* Smaller font size for small screens */
+    }
+
+    .title-containerForecast img {
+        width: 150px; /* Smaller logo for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

@@ -1,0 +1,40 @@
+/* Splash.css */
+/* Import Google font - Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* align the logo and go button in a column */
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Logo css */
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+  
+  /* Css code for the go button */
+  .go-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  /* change the cursor to a pointer when user hovers over it  */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Change colour of button when the user hovers over the button */
+  .go-button:hover {
+    background-color: #0056b3;
+  }
+  

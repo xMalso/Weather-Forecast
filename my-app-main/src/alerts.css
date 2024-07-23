@@ -1,0 +1,215 @@
+/* Import Google font - Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Apply 'Ubuntu' font family to all elements */
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Alerts page title styling */
+.titleAlerts {
+    margin-left: 37%; /* Adjusted margin for title alignment */
+    color: white; 
+    font-size: 40px; 
+}
+
+/* Container for the alerts page title flex */
+.title-containerAlerts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-left: 12%; 
+}
+
+/* Align all content on the page */
+.alerts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 50px; 
+    margin-right: 2%; 
+}
+
+/* Styling for the content inside the alerts box */
+.alerts-content {
+    margin-top: -40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgba(45, 51, 64, 0.8); 
+    padding: 20px; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    width: 60%; 
+    color: rgb(255, 255, 255); 
+}
+
+/* Styling for alerts svg */
+.alerts-svg {
+    margin-bottom: 20px; /* Adjust bottom margin */
+}
+
+/* Alert info box styling */
+.alert-info {
+    text-align: center; 
+    padding: 10px; 
+}
+
+.alert-info h2 {
+    margin-bottom: 10px; /* Adjust bottom margin */
+}
+
+/* Crop selection box styling */
+.crop-selection {
+    margin-top: 50px; 
+    text-align: center; 
+    background-color: rgba(45, 51, 64, 0.8); /* Dark background color */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    color: rgb(255, 255, 255); /* White text color */
+    border: none; 
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px; 
+    width: 60%; 
+}
+
+.crop-selection h2 {
+    margin-bottom: 10px; 
+}
+
+/* Checkboxes styling */
+.crop-checkboxes {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.crop-checkboxes label {
+    display: flex; /* Display label and input in a row */
+    align-items: center; 
+    margin-right: 150px; /* Add some spacing between checkboxes */
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    font-size: 20px; 
+}
+
+.crop-checkboxes label:last-child {
+    margin-right: 0; /* Remove margin from the last checkbox */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px; /* Add some space between checkbox and label text */
+}
+
+/* Show alerts button */
+button {
+    background-color: #ae5c19;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6b3910;/* Darker background color on hover */
+}
+
+/* Modal styling */
+.modal-overlay {
+    position: fixed; 
+    top: 0; /* Position from top */
+    left: 0; /* Position from left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Display as flexbox */
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; /* Ensure modal is above other content */
+}
+
+.modal {
+    background-color: #fff; 
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+    max-width: 400px; /* Maximum width */
+    width: 80%; /* Responsive width */
+}
+
+.modal h2 {
+    margin-bottom: 10px; 
+    color: red; 
+}
+
+.modal p {
+    margin-bottom: 20px; 
+}
+
+.modal button {
+    padding: 10px 20px; 
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none; 
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modal button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for back arrow */
+.back-arrow {
+    position: absolute; 
+    top: 20px; /* Position from top */
+    left: 20px; /* Position from left */
+    cursor: pointer; /* Change cursor */
+    width: 40px; 
+    height: 40px; 
+    display: flex; /* Display as flexbox */
+    align-items: center; 
+    justify-content: center; 
+    background-color: transparent; /* Transparent background */
+}
+
+/* Styling for back arrow SVG */
+.back-arrow svg {
+    width: 100%; 
+    height: 100%; 
+    color: white; 
+}
+
+/* Media Queries */
+
+/* Adjust title and logo alignment on top for smaller screens */
+@media screen and (max-width: 1024px) {
+    .title-containerAlerts {
+        justify-content: center; /* Align items in the center */
+    }
+    
+    .titleAlerts {
+        margin: 0; /* Remove margin to allow center alignment */
+        padding-right: 10px; /* Add some spacing between title and logo */
+    }
+    
+    .title-containerAlerts img {
+        padding-left: 10px; /* Add some spacing between title and logo */
+    }
+}
+
+/* Ensure checkboxes are displayed in a horizontal line when page resizes */
+@media screen and (max-width: 768px) {
+    .crop-checkboxes label {
+        margin-right: 20px; /* Reduce spacing between checkboxes for smaller screens */
+    }
+}

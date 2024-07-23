@@ -1,0 +1,206 @@
+/* import ubuntu font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* code for entire webpage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* set the background colour */
+body {
+    background-color: rgba(225, 135, 0, 1);
+}
+
+/* styling for the header 1 */
+h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 18px 0;
+    color: rgb(0, 0, 0);
+}
+
+/* title container for the plant page */
+/* flexbox  */
+.title-containerPlant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12%;
+}
+
+/* align the title in the correct place and adding sytling */
+.titlePlant {
+    margin-left: 37%; 
+    color: white;
+    font-size: 40px;
+}
+
+/* flex box for the textbox container */
+/* styling for each of the textboxes */
+.textbox-containerPlant {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.textboxPlant {
+    background-color: rgba(45, 51, 64, 0.8);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    padding: 20px; /* Decreased padding to allow more space for content */
+    width: 23%;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.cropRec {
+    background-color: rgba(45, 51, 64, 0.8);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    padding: 20px; /* Decreased padding to allow more space for content */
+    width: 96%;
+    margin-bottom: 15%;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+/* styling for the content inside the textbox */
+.textbox-content {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    line-height: normal;
+}
+
+/* enlarge the size of the text box and change to cursor when user hovers over the textbox */
+.textboxPlant:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* enlarge the size of the text box and change to cursor when user hovers over the textbox */
+.cropRec:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* group together the title styling for each size */
+.textbox-title,
+.textbox-titleBig,
+.textbox-titleMed {
+    color: #fff;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+/*styling for normal title */
+.textbox-title {
+    font-size: 25px;
+    opacity: 0.3;
+}
+
+/*styling for big title */
+.textbox-titleBig {
+    font-size: 30px;
+    opacity: 0.3;
+}
+
+/*styling for medium title */
+.textbox-titleMed {
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+/* styling the text thats inside of the textbox */
+.textbox-textPlant {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+/* styling for the more info button */
+.info-button {
+    background-color: #ae5c19;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -10px;
+}
+
+/* change the colour of the button when the user hovers over the button */
+.info-button:hover {
+    background-color: #6b3910;
+}
+
+/* align the button within the textbox */
+.button-container {
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* back arrow svg styling */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.back-arrow svg {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+/* Media Queries */
+
+/* Adjust title and logo alignment on top for smaller screens */
+@media screen and (max-width: 1024px) {
+    .title-containerPlant {
+        justify-content: center; /* Align items in the center */
+    }
+    
+    .titlePlant {
+        margin: 0; /* Remove margin to allow center alignment */
+        padding-right: 10px; /* Add some spacing between title and logo */
+    }
+    
+    .title-containerPlant img {
+        padding-left: 10px; /* Add some spacing between title and logo */
+    }
+}

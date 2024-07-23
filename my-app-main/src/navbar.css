@@ -1,0 +1,73 @@
+/* Styling for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(211, 110, 21); 
+    padding: 10px 0; /* Add padding top and bottom */
+    z-index: 100; /* Set z-index to ensure the navbar stays on top of other elements */
+    position: fixed; /* Fix the navbar at the bottom of the screen */
+    bottom: 0; /* Align the navbar at the bottom */
+    width: 100%; /* Make the navbar extend to the full width of the viewport */
+}
+
+/* Styling for the navbar navigation items */
+.navbar-nav {
+    display: flex;
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for individual navigation items */
+.nav-item {
+    margin-right: 20px;
+}
+
+/* Styling for the links inside navigation items */
+.nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: black;
+}
+
+/* Styling for the navbar unordered list */
+.navbar ul {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+/* Styling for individual list items */
+.navbar ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 10px;
+}
+
+/* Remove margin from the last list item */
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+/* Styling for anchor tags inside list items */
+.navbar ul li a {
+    display: inline-block; /* Display links as blocks */
+    padding: 10px 20px; /* Add padding for better spacing */
+    color: white;
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold; 
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Hover effect for anchor tags */
+.navbar ul li a:hover {
+    color: black; /* Change text color on hover */
+    background-color: white; /* Change background color on hover */
+    transform: scale(1.1); /* Scale up the element on hover */
+}
+
+/* Styling for SVG icons inside anchor tags */
+.navbar ul li a svg {
+    vertical-align: middle; /* Align SVG icon vertically with text */
+    margin-right: 5px; /* Add margin to the right of the icon */
+}
